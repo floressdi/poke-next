@@ -12,7 +12,7 @@ export default function Home({pokemoneslistos, cardPokemoninfo, notFound }) {
     <div className="flex min-h-screen flex-col items-center justify-between ">
     <nav className={Homecss.nav}>
       <span className="w-32 mt-2">
-        <Image src={logo} alt={pokemon.name}/>
+        <Image src={logo} alt="logo"/>
       </span>
       <Search />
     </nav>
@@ -37,7 +37,7 @@ export default function Home({pokemoneslistos, cardPokemoninfo, notFound }) {
   )
 }
 
-export const getServerSideProps = async (context) => {
+export const getStaticProps = async (context) => {
   const getPokemon = async (indice) => {
     const response = await fetch(
       `https://pokeapi.co/api/v2/pokemon/${indice}?limit=102&offset=0/`
