@@ -12,7 +12,7 @@ export default function Home({pokemoneslistos, cardPokemoninfo, notFound }) {
     <div className="flex min-h-screen flex-col items-center justify-between ">
     <nav className={Homecss.nav}>
       <span className="w-32 mt-2">
-        <Image src={logo}/>
+        <Image src={logo} alt={pokemon.name}/>
       </span>
       <Search />
     </nav>
@@ -24,6 +24,7 @@ export default function Home({pokemoneslistos, cardPokemoninfo, notFound }) {
       <div className="md:grid md:grid-cols-2 lg:grid-cols-3">
         {cardPokemoninfo.map((pokemon) => (
           <CardPokemon
+            key ={pokemon.id}
             name={pokemon.name}
             id={pokemon.id}
             type={pokemon.types}

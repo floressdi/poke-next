@@ -18,7 +18,7 @@ export default function Pokemon({ data }) {
             </div>
           </Link>
         </nav>
-        <Image src={data.sprites.other.dream_world.front_default} width={200} height={200}/>
+        <Image src={data.sprites.other.dream_world.front_default} width={200} height={200} alt={data.name}/>
       </header>
 
       {/*     className="my-5" */}
@@ -40,6 +40,7 @@ export default function Pokemon({ data }) {
             <h3 className="font-bold my-3">Estadisticas</h3>
             {data.stats.map((element, index) => (
               <Stats
+                key = {data.id}
                 element_name={element.stat.name}
                 element_base={element.base_stat}
               />

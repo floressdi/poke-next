@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 export default function CardPokemon(props) {
   return (
-    <div className="mx-auto w-5/6" key={props.id}>
+    <div className="mx-auto w-5/6" key={props.key}>
             <Link
               scroll={false}
               href={{
