@@ -5,6 +5,7 @@ import Homecss from "../styles/Home.module.css";
 import logo from "../public/image/pokedex.png";
 import Search from "@/components/Search";
 import CardPokemon from "@/components/CardPokemon";
+import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home({pokemoneslistos, cardPokemoninfo, notFound }) {
@@ -33,11 +34,17 @@ export default function Home({pokemoneslistos, cardPokemoninfo, notFound }) {
         ))}
       </div>
     </section>
+
+    <footer className="w-full">
+      <Footer
+        logo = {logo}
+      />
+    </footer>
   </div>
   )
 }
 
-export const getServerSideProps = async (context) => {
+export const getStaticProps = async (context) => {
   const getPokemon = async (indice) => {
     const response = await fetch(
       `https://pokeapi.co/api/v2/pokemon/${indice}?limit=102&offset=0/`

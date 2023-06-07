@@ -1,6 +1,14 @@
 import React from "react";
 
 export default function InfoMain(props) {
+
+  function dosDecimales(n){ //Trunca los numeros a 2 decimales
+    let t =n.toString();
+    let regex=/(\d*.\d{0,2})/;
+    return t.match(regex)[0];
+  }
+
+
   return (
     <section >
       <article className="text-center mb-5">
@@ -14,12 +22,12 @@ export default function InfoMain(props) {
      <span className="">
         <p className="font-bold">Altura</p>
         <br />
-        {props.height}
+        <p>{dosDecimales((props.height /10000)*1000)} M</p>
       </span>
       <span className="">
         <p className="font-bold">Peso </p>
         <br />
-        {props.weight}
+        <p> { dosDecimales((props.weight /10000)*1000)} Kg</p>
       </span>
       <span>
         <p className="font-bold">Especie</p>
