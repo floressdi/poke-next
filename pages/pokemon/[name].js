@@ -10,9 +10,9 @@ export default function Pokemon({ data }) {
   return (
     <main className={`${data.types[0].type.name} ${Pokecss.main}`}>
       <header className={`${data.types[0].type.name} ${Pokecss.header}`}>
-        <nav className="w-11/12   ">
+        <nav className="w-11/12 mb-14 h-14   ">
           <Link href="../">
-            <div className=" text-4xl flex items-center">
+            <div className="w-3/6 h-full  text-4xl flex items-center">
               <IoIosArrowBack />
               <p className="text-2xl">Pokédex</p>
             </div>
@@ -37,7 +37,7 @@ export default function Pokemon({ data }) {
 
           {/* Estadisticas  */}
           <section className="section_data_container mb-7">
-            <h3 className="font-bold my-3">Estadisticas</h3>
+            <h3 className="font-bold my-3 text-center ">Estadisticas</h3>
             {data.stats.map((element, index) => (
               <Stats
                 key = {data.id}

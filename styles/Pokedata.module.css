@@ -8,13 +8,21 @@
     flex-direction: column;
   }
   
-  
-  @media (min-width: 768px){
-   
-   .header{
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-   }
+  .main{
+    height: 100%;
+    padding-bottom: 1em;
   }
+  
+   @media(min-width:820px){
+    .main{
+      height: 100vh;
+    }
+  }
+
+  @media (min-width:1000px) {
+    .main{
+      height: 100%;
+    }
+  }
+
   

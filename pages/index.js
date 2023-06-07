@@ -19,7 +19,7 @@ export default function Home({pokemoneslistos, cardPokemoninfo, notFound }) {
     </nav>
 
     <section className="w-full my-24 py-8 ">
-      <h2 className="text-2xl font-normal text-center">
+      <h2 className=" text-xl md:text-2xl font-normal text-center">
         ¡Mas de 800 pokemones, elige tu favorito!
       </h2>
       <div className="md:grid md:grid-cols-2 lg:grid-cols-3">

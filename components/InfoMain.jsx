@@ -15,7 +15,7 @@ export default function InfoMain(props) {
         <span className="text-xl mr-3">#{props.id}</span>
         <span className="text-xl">{props.type[0].type.name}</span>
         <br />
-        <span className="text-6xl">{props.name}</span>
+        <span className="text-5xl md:text-6xl">{props.name}</span>
       </article>
 
      <div className="flex justify-between text-center section_data_container ">
