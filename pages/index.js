@@ -37,7 +37,7 @@ export default function Home({pokemoneslistos, cardPokemoninfo, notFound }) {
   )
 }
 
-export const getStaticProps = async (context) => {
+export const getServerSideProps = async (context) => {
   const getPokemon = async (indice) => {
     const response = await fetch(
       `https://pokeapi.co/api/v2/pokemon/${indice}?limit=102&offset=0/`
