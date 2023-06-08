@@ -1,35 +1,50 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
 
-First, run the development server:
+# Pokédex con Next JS
+
+## 🎯 Acerca de la pokédex
+
+Para este proyecto se hizo el uso de la [pokeapi](https://pokeapi.co/) una api donde se encuentran, mas de 800 pokemones, con el objetivo de crear una pokédex diferente.
+
+
+## ⏩ Demo
+
+[Pokédex en Next js](https://poke-next-sand.vercel.app/)
+
+
+ 
+## 🚀 Tecnologias
+
+[Next js](https://nextjs.org/)
+
+[Tailwind CSS](https://tailwindcss.com/)
+
+[PokeApi](https://pokeapi.co/)
+
+[Reac icons](https://react-icons.github.io/react-icons)
+
+[Logo Pokedex](https://fontmeme.com/es/fuente-pokemon/)
+
+[Autocompletado con Algolia](https://github.com/algolia/autocomplete)
+
+## Caracteristicas
+✅ Responsive Design
+
+✅ Use State
+
+✅ ServerSieProps
+
+✅ Deploy en Vercel
+
+Para poder clonar y modificar este proyecto solo vasta colocar el siguiente comando en tu terminal 
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+git clone https://github.com/floressdi/poke-next.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+La pokédex esta construida de diferentes tecnologías para hacer mas dinamico la aplicación y una buena estructura solida para crecer mas adelante.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
 ## Deploy on Vercel
 
