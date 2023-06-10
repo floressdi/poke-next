@@ -70,7 +70,10 @@ export default function Home({ pokemoneslistos,cardPokemoninfo,tipos,notFound,})
             })}
           </div>
         </ul>
-        <BtnMenu clicked={clickedMenu} handleClickMenu={handleClickMenu} />
+        <BtnMenu 
+          clicked={clickedMenu} 
+          handleClickMenu={handleClickMenu} 
+        />
       </nav>
 
 
@@ -82,7 +85,7 @@ export default function Home({ pokemoneslistos,cardPokemoninfo,tipos,notFound,})
           </h2>
         </div>
 
-        <div  className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+        <div  className="grid  md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
             {/* muestra dependiendo el tipo seleccionado */}
           {filtro
             ? filtro.map((pokemon) => (
