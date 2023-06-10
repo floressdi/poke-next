@@ -8,6 +8,7 @@
   --background-end-rgb: 255, 255, 255;
   --nav-color:rgb(255,255,255, 0.70);
   --section-color: rgb(255,255,255, 0.70);
+  --menu-color: rgb(255,255,255);
 }
 
 .sectiondata{
@@ -28,6 +29,28 @@
   width: 100%;
   height: 10px;
 }
+
+/* clases del menu  */
+.ul{
+  width: 100%;
+  height: auto;   
+  position: absolute;
+  top:  -2000%;
+  transition: .3s ease;
+}
+
+/* Se activa al dar click */
+.ul.active{ 
+  position: absolute;
+  height: 100vh;
+  top: 100%;
+  right: 0;
+  background-color: var(--menu-color);
+  /* el overflow es para scroll vertical  */
+  overflow-x:hidden ;  
+  overflow-y: auto;
+  padding-bottom: 5em; 
+}  
 
 .barra::-webkit-progress-value {
   background: rgb(43, 44, 44);

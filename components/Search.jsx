@@ -3,7 +3,7 @@ import { useMemo, useRef, useState } from "react";
 import { createAutocomplete } from "@algolia/autocomplete-core";
 import Link from "next/link";
 
-const AutocompleteItem = ({ name }) => {
+const AutocompleteItem = ({ name}) => {
   return (
     <li>
       <Link href={`/pokemon/${name}`}>

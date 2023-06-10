@@ -17,7 +17,7 @@ export default function CardPokemon(props) {
                 className={`${Cardcss.cardpokemon} ${props.type[0].type.name}`}
               >
                 <div>
-                  <p className="text-2xl md:text-4xl">{props.name}</p>
+                  <p className="text-2xl md:text-3xl">{props.name}</p>
                   <div className="flex">
                     <p className="mr-1">#{props.id}</p>
                     <p>{props.type[0].type.name}</p>
@@ -28,6 +28,6 @@ export default function CardPokemon(props) {
                 </div>
               </div>
             </Link>
-          </div>
+      </div>
   )
 }

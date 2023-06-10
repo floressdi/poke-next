@@ -17,7 +17,7 @@ export default function Footer(props) {
             <Image src={props.logo} alt="logo"></Image>
           </div>
           <div className="">
-            <p className="text-2xl">Herramientas usadas</p>
+            <p className="text-2xl">Tecnologías </p>
             <ul>
               <li>
                 <a href="https://nextjs.org/" target="blank">Hecho con Next JS</a>
