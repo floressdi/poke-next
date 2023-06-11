@@ -53,7 +53,7 @@ export default function Home({
         <Search />
 
         {/* Muestra todos los tipos de pokemons */}
-        <div >
+        <div>
           <ul className={`ul ${clickedMenu ? "active" : ""}`}>
             <button
               className="text-2xl ml-14 px-4 my-3 md:ml-72  hover:bg-blue-300 transition-all hover:pl-3 hover:text-cyan-700 "
