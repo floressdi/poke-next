@@ -18,8 +18,8 @@ export default function CardPokemon(props) {
               >
                 <div>
                   <p className="text-2xl md:text-3xl">{props.name}</p>
-                  <div className="flex ">
-                    <p className="mr-1">#{props.id}</p>
+                  <div className="flex " >
+                    <p className="mr-1" key={props.id}>#{props.id} </p>
                     {props.type.map((tipos)=>{
                       return(
                         <p className='ml-1'>{tipos.type.name}</p>
