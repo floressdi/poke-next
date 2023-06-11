@@ -52,6 +52,7 @@
   padding-bottom: 5em; 
 }  
 
+
 .barra::-webkit-progress-value {
   background: rgb(43, 44, 44);
   border-radius: 1em;
@@ -130,4 +131,9 @@
 }
 .default{
   background-color: hsl(341, 24%, 13%);
+}
+
+.dark{
+  background-color: hsl(0, 0%, 20%);
+  color: white;
 }

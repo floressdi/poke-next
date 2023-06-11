@@ -41,6 +41,9 @@ export default function Footer(props) {
                 </a>
               </li>
               <li>
+              <a href="https://www.flaticon.com/free-icons/pokemon" title="pokemon icons">Imagen de pokebola</a>
+              </li>
+              <li>
                 <a href="https://github.com/algolia/autocomplete" target="blank">
                   Autocompletado con Algolia
                 </a>
@@ -48,6 +51,7 @@ export default function Footer(props) {
               <li>
                 <a href="https://github.com/floressdi/poke-next" target="blank">¡Quiero ver el codigo!</a>
               </li>
+           
             </ul>
           </div>
         </div>

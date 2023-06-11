@@ -3,7 +3,7 @@ import { useMemo, useRef, useState } from "react";
 import { createAutocomplete } from "@algolia/autocomplete-core";
 import Link from "next/link";
 
-const AutocompleteItem = ({ name}) => {
+const AutocompleteItem = ({name}) => {
   return (
     <li>
       <Link href={`/pokemon/${name}`}>
@@ -51,8 +51,8 @@ export default function Search(props) {
   });
 
   return (
-    <form ref={formRef} className="flex justify-center " {...formProps}>
-      <div className="flex relative p-1  ">
+    <form  ref={formRef} className="flex justify-center " {...formProps}>
+      <div className="flex relative p-1">
         <input
           ref={inputRef}
           className="flex-1 p-2 pl-4  rounded-full w-full text-center "
@@ -66,7 +66,6 @@ export default function Search(props) {
           >
             {autocompleteState.collections.map((collection, index) => {
               const { items } = collection;
-              console.log({ items });
               return(
                 <section key={`section-${index}`}>
                   {items.length > 0 && (

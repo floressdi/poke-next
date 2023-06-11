@@ -4,8 +4,8 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 export default function CardPokemon(props) {
-  return (
-    <div className="mx-auto w-10/12" key={props.key}>
+  return (  
+    <div className="mx-auto w-9/12 md:w-11/12" key={props.key}>
             <Link
               scroll={false}
               href={{
@@ -18,9 +18,14 @@ export default function CardPokemon(props) {
               >
                 <div>
                   <p className="text-2xl md:text-3xl">{props.name}</p>
-                  <div className="flex">
+                  <div className="flex ">
                     <p className="mr-1">#{props.id}</p>
-                    <p>{props.type[0].type.name}</p>
+                    {props.type.map((tipos, index)=>{
+                      return(
+                        <p className='ml-1'>{tipos.type.name}</p>
+                      )
+                    })
+                    }
                   </div>
                 </div>
                 <div className={Cardcss.cardpokemonimage}>
