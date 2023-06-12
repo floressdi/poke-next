@@ -117,14 +117,14 @@ export const getServerSideProps = async (context) => {
   const getPokemon = async (indice) => {
     //Traemos pokemones de acuerdo al indicie
     const response = await fetch(
-      `https://pokeapi.co/api/v2/pokemon/${indice}?limit=204&offset=0/` //Pasamos el indice ala api
+      `https://pokeapi.co/api/v2/pokemon/${indice}?limit=104&offset=0/` //Pasamos el indice ala api
     );
     const data = await response.json();
     return data;
   };
 
   let pokemons = []; //Este arreglo guardara los pokemones
-  for (let indice = 1; indice <= 204; indice++) {
+  for (let indice = 1; indice <= 104; indice++) {
     let data = await getPokemon(indice); //Ejecutamos getPokemon pasando como parametro el indice
     pokemons.push(data); //los guarda en el arreglo
   }
