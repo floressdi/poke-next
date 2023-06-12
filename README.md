@@ -4,7 +4,7 @@
 
 ## 🎯 Acerca de la pokédex
 
-Para este proyecto se hizo el uso de la [pokeapi](https://pokeapi.co/) una api donde se encuentran, mas de 800 pokemones, con el objetivo de crear una pokédex diferente.
+Para este proyecto se hizo el uso de la [pokeapi](https://pokeapi.co/) una api donde se encuentran, mas de 800 pokemones, con el objetivo de crear una pokédex diferente a la [version anterior](https://floressdi.github.io/Pokedex/?pokemon=charmander).
 
 
 ## ⏩ Demo
@@ -32,18 +32,18 @@ Para este proyecto se hizo el uso de la [pokeapi](https://pokeapi.co/) una api d
 
 ✅ Use State
 
-✅ ServerSieProps
+✅ StaticProps
 
 ✅ Deploy en Vercel
 
-Para poder clonar y modificar este proyecto solo vasta colocar el siguiente comando en tu terminal 
+Para poder clonar y modificar este proyecto solo coloca el siguiente comando en tu terminal 
 
 ```bash
 git clone https://github.com/floressdi/poke-next.git
 ```
 
 
-La pokédex esta construida de diferentes tecnologías para hacer mas dinamico la aplicación y una buena estructura solida para crecer mas adelante.
+La pokédex esta construida de diferentes tecnologías para hacer mas dinamica la aplicación y una buena estructura para crecer mas adelante.
 
 
 ## Deploy on Vercel
