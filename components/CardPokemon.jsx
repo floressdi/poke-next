@@ -21,14 +21,14 @@ export default function CardPokemon(props) {
                   <div className="flex " >
                     <p className="mr-1" >#{props.id} </p>
 
-                    <p>{props.type[0].type.name}</p>
-                    
-                    {/* {props.type.map((tipos)=>{
+                    {/* <p>{props.type[0].type.name}</p> */}
+
+                    {props.type.map((tipos)=>{
                       return(
                         <p className='ml-1'>{tipos.type.name}</p>
                       )
                     })
-                    } */}
+                    }
                   </div>
                 </div>
                 <div className={Cardcss.cardpokemonimage}>
