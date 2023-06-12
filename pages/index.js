@@ -124,7 +124,7 @@ export const getStaticProps = async (context) => {
   };
 
   let pokemons = []; //Este arreglo guardara los pokemones
-  for (let indice = 1; indice <= 204; indice++) {
+  for (let indice = 1; indice <= 104; indice++) {
     let data = await getPokemon(indice); //Ejecutamos getPokemon pasando como parametro el indice
     pokemons.push(data); //los guarda en el arreglo
   }
