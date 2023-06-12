@@ -110,7 +110,7 @@ export default function Home({
   );
 }
 
-export const getStaticProps = async (context) => {
+export const getServerSideProps = async (context) => {
   const resTipos = await fetch("https://pokeapi.co/api/v2/type"); //Traemos los tipos de pokemons
   const tipos = await resTipos.json();
 
