@@ -17,8 +17,6 @@ export default function Home({
   tipos,
   notFound,
 }) {
-
-
   const [filtro, setFiltrar] = useState(cardPokemoninfo);
 
   const [clickedMenu, setClickedMenu] = useState(false); //manejaremos el estado del menu
@@ -29,46 +27,48 @@ export default function Home({
   const filtrar = (elTipo) => {
     setFiltrar(cardPokemoninfo);
 
-      if (elTipo === "borrar") {
-        setFiltrar(cardPokemoninfo);
-        setClickedMenu(!clickedMenu); //acutaliza el estado del click en el menu
-      } else {
-        setClickedMenu(!clickedMenu); //acutualiza el estado del click en el menu
-        let filtradoPorTipo = cardPokemoninfo
-          .filter((pokemon) =>
-            pokemon.types.some((tipo) => tipo.type.name === elTipo)
-          )
-          .map((tem2) => {
-            let nuevosTem = { ...tem2 };
-            return nuevosTem;
-          });
-        setFiltrar(filtradoPorTipo);
-      }
+    if (elTipo === "borrar") {
+      setFiltrar(cardPokemoninfo);
+      setClickedMenu(!clickedMenu); //acutaliza el estado del click en el menu
+    } else {
+      setClickedMenu(!clickedMenu); //acutualiza el estado del click en el menu
+      let filtradoPorTipo = cardPokemoninfo
+        .filter((pokemon) =>
+          pokemon.types.some((tipo) => tipo.type.name === elTipo)
+        )
+        .map((tem2) => {
+          let nuevosTem = { ...tem2 };
+          return nuevosTem;
+        });
+      setFiltrar(filtradoPorTipo);
+    }
   };
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-between ">
+    <div className="flex min-h-screen flex-col items-center  ">
       <nav className={Homecss.nav}>
-        <span className="w-10 mr-3">
+        <span className="w-10  mr-3">
           <Image src={pokebola} alt="logo" />
         </span>
-        <Search />
 
+        <Search />
         {/* Muestra todos los tipos de pokemons */}
         <div>
           <ul className={`ul ${clickedMenu ? "active" : ""}`}>
-            <button
-              className="w-11/12 mx-auto rounded-xl  text-2xl md:ml-14 p-2 ml-5 my-3 todos "
-              onClick={() => filtrar("borrar")}
-            >
-              Mostrar Todos
-            </button>
-            <div className="w-11/12 grid gap-3 mx-auto  ">
+            
+            <div className="w-11/12 grid gap-3 md:w-full mx-auto  md:overflow-x-auto md:grid-flow-col filtro">
+              <button
+                className="w-full mx-auto rounded-xl  text-2xl p-2 md:text-xl md:p-1  todos md:h-14 md:w-20  "
+                onClick={() => filtrar("borrar")}
+              >
+                Mostrar Todos
+              </button>
+
               {tipos.map((tipo, index) => {
                 return (
                   <button
                     key={tipo.name}
-                    className={`${tipo.name} p-2 rounded-xl text-2xl`}
+                    className={`${tipo.name} p-2 rounded-xl text-2xl md:p-1 md:text-xl md:h-14 md:w-20`}
                     onClick={() => filtrar(tipo.name)}
                   >
                     {tipo.name}
@@ -78,7 +78,7 @@ export default function Home({
             </div>
           </ul>
         </div>
-        <BtnMenu clicked={clickedMenu} handleClickMenu={handleClickMenu} />
+        <BtnMenu   clicked={clickedMenu} handleClickMenu={handleClickMenu} />
       </nav>
 
       {/* Seccion de pokemones */}
@@ -109,8 +109,6 @@ export default function Home({
             Mostrar mas pokemons
           </button>
         </div> */}
-
-
       </section>
 
       <footer className="w-full">
@@ -127,7 +125,7 @@ export const getStaticProps = async (context) => {
   const getPokemon = async (indice) => {
     //Traemos pokemones de acuerdo al indicie
     const response = await fetch(
-      `https://pokeapi.co/api/v2/pokemon/${indice}?limit=704&offset=0/` //Pasamos el indice ala api
+      `https://pokeapi.co/api/v2/pokemon/${indice}?limit=704&offset=0/` //Pasamos el indice a la api
     );
     const data = await response.json();
     return data;
@@ -135,16 +133,16 @@ export const getStaticProps = async (context) => {
 
   let pokemons = []; //Este arreglo guardara los pokemones
 
-  let inicio = 1
-  let limite = 204
+  let inicio = 1;
+  let limite = 204;
 
-  // if(context == true){ // si mostrar mas es verdadero aumenta el limite 
+  // if(context == true){ // si mostrar mas es verdadero aumenta el limite
   //    limite += limite;
-  // }  
+  // }
 
   for (let indice = inicio; indice <= limite; indice++) {
-    let data = await getPokemon(indice);//Ejecutamos getPokemon pasando como parametro el indice
-    pokemons.push(data);//los guarda en el arreglo
+    let data = await getPokemon(indice); //Ejecutamos getPokemon pasando como parametro el indice
+    pokemons.push(data); //los guarda en el arreglo
     inicio = limite;
   }
 

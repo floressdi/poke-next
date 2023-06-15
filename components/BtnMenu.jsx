@@ -10,7 +10,7 @@ export default function BtnMenu(props) {
     <button className={Btncss.btnmenu}
         onClick={props.handleClickMenu}
     >
-      <BiMenu/>
+      <BiMenu />
     </button>
   )
 }
