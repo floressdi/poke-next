@@ -16,7 +16,7 @@ export default function CardPokemon(props) {
               <div
                 className={`${Cardcss.cardpokemon} ${props.type[0].type.name}`}
               >
-                <div>
+                <div className=''>
                   <p className="text-2xl md:text-3xl">{props.name}</p>
                   <div className="flex" key={props.key}>
                     <p className="mr-1">#{props.id}</p>

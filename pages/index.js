@@ -4,11 +4,10 @@ import Homecss from "../styles/Home.module.css";
 import logo from "../public/image/pokedex.png";
 import CardPokemon from "@/components/CardPokemon";
 import Footer from "@/components/Footer";
-import pokebola from "../public/image/pokebola.png";
 import { useState } from "react";
 import BtnMenu from "@/components/BtnMenu";
 import Search from "@/components/Search";
-import Image from "next/image";
+import BotonPoke from "@/components/BotonPoke";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home({
@@ -44,24 +43,32 @@ export default function Home({
     }
   };
 
+  // const envio = ()=>{
+  //   console.log('enviado ')
+  // }
+
   return (
     <div className="flex min-h-screen flex-col items-center  ">
-      <nav className={Homecss.nav}>
-        <span className="w-10  mr-3">
-          <Image src={pokebola} alt="logo" />
-        </span>
+      <nav className={`${Homecss.nav}`}>
+        <div className="w-full flex items-center justify-center">
+          <BotonPoke/>
 
-        <Search />
+          <Search 
+              // onSubmit={envio}
+          />
+
+          <BtnMenu clicked={clickedMenu} handleClickMenu={handleClickMenu} />
+        </div>
+
         {/* Muestra todos los tipos de pokemons */}
-        <div>
+        <div className=" w-10/12" >
           <ul className={`ul ${clickedMenu ? "active" : ""}`}>
-            
             <div className="w-11/12 grid gap-3 md:w-full mx-auto  md:overflow-x-auto md:grid-flow-col filtro">
               <button
                 className="w-full mx-auto rounded-xl  text-2xl p-2 md:text-xl md:p-1  todos md:h-14 md:w-20  "
                 onClick={() => filtrar("borrar")}
               >
-                Mostrar Todos
+                Todos
               </button>
 
               {tipos.map((tipo, index) => {
@@ -78,7 +85,6 @@ export default function Home({
             </div>
           </ul>
         </div>
-        <BtnMenu   clicked={clickedMenu} handleClickMenu={handleClickMenu} />
       </nav>
 
       {/* Seccion de pokemones */}

@@ -7,13 +7,15 @@ const AutocompleteItem = ({name}) => {
   return (
     <li>
       <Link href={`/pokemon/${name}`}>
-        <div className="flex items-center justify-center p-5 hover:bg-blue-300">
+        <div className="flex items-center justify-center p-5 dark:bg-black  hover:bg-blue-300 dark:hover:bg-blue-300">
           <h3>{name}</h3>
         </div>
       </Link>
     </li>
   );
 };
+
+
 
 export default function Search(props) {
   const [autocompleteState, setAutocompleteState] = useState({
@@ -50,19 +52,12 @@ export default function Search(props) {
     inputElement: inputRef.current
   });
 
-  // function funciont(e){
-  //   var x = e.keyCode
-  //   if(x === "Enter"){
-  //     console.log("enviado")
-  //   }
-  // }
 
   return (
     <form  ref={formRef} className="flex justify-center " {...formProps}>
       <div className="flex relative p-1">
         <input
           ref={inputRef}
-          // onKeyDown={funciont()}
           className="flex-1 p-2 pl-4  rounded-full w-full text-center "
           {...inputProps}
         />
