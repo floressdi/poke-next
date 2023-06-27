@@ -13,16 +13,17 @@
 
 @layer base{
   body{
-    @apply dark:bg-gray-950
+    @apply dark:bg-stone-950
   }
   .section_data_container {
-    @apply dark:bg-gray-900
+    @apply dark:bg-stone-900
   }
 }
 
 
 body{
   transition-duration: 1s, 1s;
+
 }
 
 .sectiondata{
