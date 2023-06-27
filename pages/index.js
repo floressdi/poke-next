@@ -61,11 +61,11 @@ export default function Home({
         </div>
 
         {/* Muestra todos los tipos de pokemons */}
-        <div className=" w-10/12" >
+        <div className=" w-full" >
           <ul className={`ul ${clickedMenu ? "active" : ""}`}>
             <div className="w-11/12 grid gap-3 md:w-full mx-auto  md:overflow-x-auto md:grid-flow-col filtro">
               <button
-                className="w-full mx-auto rounded-xl  text-2xl p-2 md:text-xl md:p-1  todos md:h-14 md:w-20  "
+                className="w-full mx-auto rounded-xl text-neutral-600 text-2xl p-2 md:text-xl md:p-1  todos md:h-14 md:w-20  "
                 onClick={() => filtrar("borrar")}
               >
                 Todos
@@ -75,7 +75,7 @@ export default function Home({
                 return (
                   <button
                     key={tipo.name}
-                    className={`${tipo.name} p-2 rounded-xl text-2xl md:p-1 md:text-xl md:h-14 md:w-20`}
+                    className={`${tipo.name} p-2 rounded-xl text-2xl text-white md:p-1  md:text-xl md:h-14 md:w-24`}
                     onClick={() => filtrar(tipo.name)}
                   >
                     {tipo.name}

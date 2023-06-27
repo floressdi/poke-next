@@ -9,6 +9,12 @@
     margin-bottom: 10px;
     cursor: pointer;
     padding: 1rem;
+    color: white;
+}
+
+.idtext{
+    color: rgb(255, 255, 255, 0.80);
+    font-weight: bold;
 }
 
 @media(min-width: 1000px){
@@ -18,14 +24,14 @@
         margin-bottom: 15px;
     }
 
-    .cardpokemonimage{
+    /* .cardpokemonimage{
         width: 80px;
         height: 80px;
-    }
+    } */
 }
 
 @media(min-width: 300px){
     .cardpokemon{
-        height: 150px;
+        height: 120px;
     }
 }

@@ -23,7 +23,6 @@
 
 body{
   transition-duration: 1s, 1s;
-
 }
 
 .sectiondata{
@@ -47,22 +46,23 @@ body{
 
 /* clases del menu  */
 .ul{
-  display: none;
+  overflow: hidden;
+  height: 0px;
   backdrop-filter: blur(10px);
-  transition-duration: 3s, 5s;
+  transition: all 250ms ease-out;
 }
 
 /* Se activa al dar click */
 .ul.active{ 
   width: 100%;
   height: 100vh;
-  display: block;
   /* el overflow es para scroll vertical  */
   /* overflow-x:hidden ;   */
   overflow-y: auto;
   padding-top: 1em; 
   padding-bottom: 5em; 
 }  
+
 
 .barra::-webkit-progress-value {
   background: rgb(43, 44, 44);
@@ -98,9 +98,8 @@ body{
 .todos{
   background-color: rgb(185, 185, 185);
 }
-
 .electric{
-  background-color: hsl(50, 100%, 68%);
+  background-color: #ffe252;
 }
 .normal{
   background-color: hsl(350, 16%, 63%);
@@ -115,7 +114,7 @@ body{
   background-color: hsl(195, 95%, 40%);
 }
 .ice{
-  background-color: hsl(195, 95%, 84%);
+  background-color: hsl(195, 100%, 74%);
 }
 .rock{
   background-color: hsl(300, 1%, 60%);
@@ -124,16 +123,16 @@ body{
   background-color: hsl(162, 69%, 69%);
 }
 .grass{
-  background-color: hsl(163, 34%, 44%);
+  background: hsl(164, 42%, 54%);
 }
 .psychic{
-  background-color: hsl(340, 100%, 89%);
+  background-color: #fa99b9;
 }
 .ghost{
   background-color: hsl(351, 49%, 29%);
 }
 .bug{
-  background-color: hsl(121, 90%, 81%);
+  background-color: hsl(101, 100%, 65%);
 }
 .poison{
   background-color: hsl(338, 17%, 41%);
@@ -149,21 +148,16 @@ body{
 }
 .fighting{
   background-color: hsl(0, 0%, 18%);
-  color: white;
 }
 .default{
   background-color: hsl(341, 24%, 13%);
 }
-
 .dark{
   background-color: hsl(0, 0%, 20%);
-  color: white;
 }
 .unknown {
   background: #454545;
-  color: white;
 }
 .shadow {
   background: #4f4f4f;
-  color: white;
 }

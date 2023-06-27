@@ -1,41 +1,46 @@
-import React from 'react'
-import Cardcss from "../styles/Card.module.css"
-import Link from 'next/link'
-import Image from 'next/image'
+import React from "react";
+import Cardcss from "../styles/Card.module.css";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function CardPokemon(props) {
-  return (  
-    <div className="mx-auto w-9/12 md:w-11/12" >
-            <Link
-              scroll={false}
-              href={{
-                pathname: "/pokemon/[name]",
-                query: { name: props.name },
-              }}
-            >
-              <div
-                className={`${Cardcss.cardpokemon} ${props.type[0].type.name}`}
-              >
-                <div className=''>
-                  <p className="text-2xl md:text-3xl">{props.name}</p>
-                  <div className="flex" key={props.key}>
-                    <p className="mr-1">#{props.id}</p>
+  return (
+    <div className="mx-auto w-11/12">
+      <Link
+        scroll={false}
+        href={{
+          pathname: "/pokemon/[name]",
+          query: { name: props.name },
+        }}
+      >
+        <div className={`${Cardcss.cardpokemon} ${props.type[0].type.name}`}>
+          <div className="grid grid-cols-2">
+            <div className="overflow-hidden">
+              <Image
+                src={props.img}
+                alt={props.name}
+                width={80}
+                height={80}
+              />
+            </div>
+            <div className="flexbox ml-4" key={props.key}>
+              <p className="text-2xl md:text-3xl">{props.name}</p>
+              <p className="text-white">{props.type[0].type.name}</p>
 
-                    <p>{props.type[0].type.name}</p>
-
-                    {/* {props.type.map((tipos)=>{
+              {/* {props.type.map((tipos)=>{
                       return(
                         <p className='ml-1'>{tipos.type.name}</p>
                       )
                     })
                     } */}
-                  </div>
-                </div>
-                <div className={Cardcss.cardpokemonimage}>
-                  <Image src={props.img} alt={props.name} width={100} height={100}/>
-                </div>
-              </div>
-            </Link>
-      </div>
-  )
+            </div>
+          </div>
+
+          <div className="flex items-end h-full w-full justify-end">
+            <p className={`${Cardcss.idtext} text-3xl mr-3`}>#{props.id}</p>
+          </div>
+        </div>
+      </Link>
+    </div>
+  );
 }

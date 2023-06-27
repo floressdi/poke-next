@@ -24,7 +24,7 @@ export default function Pokemon({ data }) {
       {/*     className="my-5" */}
       {/* Informacion importante */}
       <section className="py-6 md:w-8/12 lg:w-6/12 md:mx-auto">
-        <div className="w-10/12 mx-auto">
+        <div className="w-11/12 mx-auto">
           <InfoMain
             id={data.id}
             name={data.name}
