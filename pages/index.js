@@ -8,6 +8,8 @@ import { useState } from "react";
 import BtnMenu from "@/components/BtnMenu";
 import Search from "@/components/Search";
 import BotonPoke from "@/components/BotonPoke";
+import { Link } from "react-scroll";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home({
@@ -43,43 +45,58 @@ export default function Home({
     }
   };
 
-  // const envio = ()=>{
-  //   console.log('enviado ')
-  // }
+  const [limite, setLimite] = useState(25);
+  const showmore = () => {
+    if (limite <= 800) {
+      setLimite(limite + 25);
+    } else {
+      setLimite(limite === 25);
+    }
+  };
 
   return (
     <div className="flex min-h-screen flex-col items-center  ">
       <nav className={`${Homecss.nav}`}>
         <div className="w-full flex items-center justify-center">
-          <BotonPoke/>
+          <BotonPoke />
 
-          <Search 
-              // onSubmit={envio}
+          <Search
+          // onSubmit={envio}
           />
 
           <BtnMenu clicked={clickedMenu} handleClickMenu={handleClickMenu} />
         </div>
 
         {/* Muestra todos los tipos de pokemons */}
-        <div className=" w-full" >
+        <div className=" w-full">
           <ul className={`ul ${clickedMenu ? "active" : ""}`}>
             <div className="w-11/12 grid gap-3 md:w-full mx-auto  md:overflow-x-auto md:grid-flow-col filtro">
-              <button
-                className="w-full mx-auto rounded-xl text-neutral-600 text-2xl p-2 md:text-xl md:p-1  todos md:h-14 md:w-20  "
+              <Link
+                to="sectionpokemons"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={300}
+                className="w-full mx-auto rounded-xl cursor-pointer text-neutral-600 text-2xl p-2 text-center md:text-base md:p-1 todos md:h-8 md:w-20  "
                 onClick={() => filtrar("borrar")}
               >
                 Todos
-              </button>
+              </Link>
 
               {tipos.map((tipo, index) => {
                 return (
-                  <button
+                  <Link
                     key={tipo.name}
-                    className={`${tipo.name} p-2 rounded-xl text-2xl text-white md:p-1  md:text-xl md:h-14 md:w-24`}
+                    className={`${tipo.name} p-2 rounded-xl  cursor-pointer text-2xl text-white md:p-1 text-center md:text-base md:h-8 md:w-24`}
+                    to="sectionpokemons"
+                    spy={true}
+                    smooth={true}
+                    offset={50}
+                    duration={300}
                     onClick={() => filtrar(tipo.name)}
                   >
                     {tipo.name}
-                  </button>
+                  </Link>
                 );
               })}
             </div>
@@ -88,7 +105,7 @@ export default function Home({
       </nav>
 
       {/* Seccion de pokemones */}
-      <section className="w-full md:w-11/12 my-10 py-8 ">
+      <section id="sectionpokemons" className="w-full md:w-11/12 my-10 py-8 ">
         <div className="w-10/12 mx-auto my-3">
           <h2 className=" text-xl md:text-2xl font-normal text-center">
             ¡Busca un pokemon por su nombre o por su numero !
@@ -96,25 +113,28 @@ export default function Home({
         </div>
 
         <div className="grid  md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {/* muestra dependiendo el tipo seleccionado */}
+          {/* muestra dependiendo el tipo seleccionado y con un limite que se puede actualizar con un boton */}
           {filtro
-            ? filtro.map((pokemon) => (
-                <CardPokemon
-                  key={pokemon.id}
-                  name={pokemon.name}
-                  id={pokemon.id}
-                  type={pokemon.types}
-                  img={pokemon.sprites}
-                />
-              ))
+            ? filtro.map(
+                (pokemon, index) =>
+                  index < limite && (
+                    <CardPokemon
+                      key={pokemon.id}
+                      name={pokemon.name}
+                      id={pokemon.id}
+                      type={pokemon.types}
+                      img={pokemon.sprites}
+                    />
+                  )
+              )
             : "Cargando..."}
         </div>
 
-        {/* <div className="w-full my-16  flex justify-center  h-auto">
-          <button onClick={funcion} className="text-center w-64 h-14  bg-yellow-300  rounded-lg">
-            Mostrar mas pokemons
+        <div className="w-full my-16  flex justify-center  h-auto">
+          <button onClick={showmore} className=" btn-show ">
+            <span> Mostrar mas pokemons</span>
           </button>
-        </div> */}
+        </div>
       </section>
 
       <footer className="w-full">
@@ -139,17 +159,9 @@ export const getStaticProps = async (context) => {
 
   let pokemons = []; //Este arreglo guardara los pokemones
 
-  let inicio = 1;
-  let limite = 204;
-
-  // if(context == true){ // si mostrar mas es verdadero aumenta el limite
-  //    limite += limite;
-  // }
-
-  for (let indice = inicio; indice <= limite; indice++) {
+  for (let indice = 1; indice <= 649; indice++) {
     let data = await getPokemon(indice); //Ejecutamos getPokemon pasando como parametro el indice
     pokemons.push(data); //los guarda en el arreglo
-    inicio = limite;
   }
 
   let cardPokemoninfo = pokemons.map((pokemon) => {

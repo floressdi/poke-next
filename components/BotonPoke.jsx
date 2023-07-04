@@ -11,7 +11,7 @@ export default function BotonPoke() {
   return (
     <button
         onClick={()=> theme == "dark" ? setTheme('light'):setTheme("dark")}
-        className='w-10 mr-3'
+        className='w-10 mr-3 md:w-8'
     >
           <Image src={pokebola} alt="logo" />   
     </button>

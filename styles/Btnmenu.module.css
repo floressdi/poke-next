@@ -3,10 +3,23 @@
     height: 40px;
     border-radius: 15%;
     border: 1px solid rgb(200, 200, 200);
-    font-size: 2rem;
+    /* color: rgb(105, 105, 105); */
+    font-size: 1.5rem;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all 250ms ease-out;
 }
 
+.btnmenu:hover{
+    background-color: rgba(17, 152, 241, 0.103);
+}
+
+
+@media (min-width:1200px) {
+        .btnmenu{
+            width: 35px;
+            height: 35px;
+        }
+}

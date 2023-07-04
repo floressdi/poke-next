@@ -6,7 +6,7 @@ import Stats from "@/components/Stats";
 import InfoMain from "@/components/InfoMain";
 import Image from "next/image";
 
-export default function Pokemon({ data }) {
+export default function Pokemon({ data}) {
   return (
     <main className={`${data.types[0].type.name} ${Pokecss.main}`}>
       <header className={`${data.types[0].type.name} ${Pokecss.header}`}>
@@ -46,6 +46,10 @@ export default function Pokemon({ data }) {
               />
             ))}
           </section>
+
+          {/* <Description
+            id={data.id}
+          /> */}
         </div>
       </section>
     </main>
@@ -60,7 +64,7 @@ export async function getServerSideProps(context) {
 
   return {
     props: {
-      data,
+      data
     },
   };
 }

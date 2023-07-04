@@ -11,15 +11,3 @@
     z-index: 100;
   }
   
-.form{
-  width: 70%;
-  padding-bottom: 1em;
-}
-
-.form > input{
-  width: 100%;
-  text-align: center;
-  background-color: rgb(222, 222, 222);
-  border-radius: 1em;
-  height: 37px;
-}

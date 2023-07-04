@@ -15,7 +15,7 @@ export default function CardPokemon(props) {
       >
         <div className={`${Cardcss.cardpokemon} ${props.type[0].type.name}`}>
           <div className="grid grid-cols-2">
-            <div className="overflow-hidden">
+            <div className="h-9">
               <Image
                 src={props.img}
                 alt={props.name}
@@ -24,7 +24,7 @@ export default function CardPokemon(props) {
               />
             </div>
             <div className="flexbox ml-4" key={props.key}>
-              <p className="text-2xl md:text-3xl">{props.name}</p>
+              <p className="text-2xl ">{props.name}</p>
               <p className="text-white">{props.type[0].type.name}</p>
 
               {/* {props.type.map((tipos)=>{
@@ -37,7 +37,7 @@ export default function CardPokemon(props) {
           </div>
 
           <div className="flex items-end h-full w-full justify-end">
-            <p className={`${Cardcss.idtext} text-3xl mr-3`}>#{props.id}</p>
+            <p className={`${Cardcss.idtext} text-3xl md:text-2xl mr-3`}>#{props.id}</p>
           </div>
         </div>
       </Link>
