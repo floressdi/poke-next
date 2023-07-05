@@ -159,7 +159,7 @@ body{
   background-color: rgb(185, 185, 185);
 }
 .electric{
-  background-color: hwb(56 33% 0%);
+  background-color: hsl(56, 100%, 66%);
 }
 .normal{
   background-color: hsl(350, 16%, 63%);
