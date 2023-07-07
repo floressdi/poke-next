@@ -30,7 +30,7 @@ export default function CardPokemon(props) {
               <div className="flex " >
               {props.type.map((tipos)=>{
                       return(
-                        <p key{props.id} className={Cardcss.typetext}>{tipos.type.name}</p>
+                        <p key={props.id} className={Cardcss.typetext}>{tipos.type.name}</p>
                       )
                     })
               }
