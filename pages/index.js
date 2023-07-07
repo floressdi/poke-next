@@ -166,7 +166,7 @@ export const getStaticProps = async (context) => {
     return {
       id: pokemon.id,
       name: pokemon.name,
-      sprites: pokemon.sprites.other.dream_world.front_default,
+      sprites: pokemon.sprites.other.home.front_default,
       types: pokemon.types,
     };
   });
