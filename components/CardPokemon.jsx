@@ -27,10 +27,10 @@ export default function CardPokemon(props) {
               <p className="text-2xl ">{props.name}</p>
               {/* <p className= {Cardcss.typetext}>{props.type[0].type.name}</p> */}
 
-              <div className="flex " key ={props.id}>
+              <div className="flex " >
               {props.type.map((tipos)=>{
                       return(
-                        <p className={Cardcss.typetext}>{tipos.type.name}</p>
+                        <p key{props.id} className={Cardcss.typetext}>{tipos.type.name}</p>
                       )
                     })
               }
