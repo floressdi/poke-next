@@ -6,7 +6,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-  --nav-color:rgb(255,255,255, 0.70);
+  --nav-color:rgb(255,255,255, 0.25);
   --section-color: rgb(255,255,255, 0.70);
   --menu-color: rgb(255,255,255);
   --btn-show: rgb(45, 119, 255);
@@ -14,10 +14,10 @@
 
 @layer base{
   body{
-    @apply dark:bg-stone-950
+    @apply dark:bg-stone-800
   }
   .section_data_container {
-    @apply dark:bg-stone-900
+    @apply dark:bg-stone-800
   }
 }
 
@@ -49,7 +49,6 @@ body{
 .ul{
   overflow: hidden;
   height: 0px;
-  backdrop-filter: blur(10px);
   transition: all 250ms ease-out;
 }
 

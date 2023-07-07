@@ -5,8 +5,8 @@ import Image from "next/image";
 
 export default function CardPokemon(props) {
   return (
-    <div className="mx-auto w-11/12">
       <Link
+        className="mx-auto w-11/12"
         scroll={false}
         href={{
           pathname: "/pokemon/[name]",
@@ -25,14 +25,16 @@ export default function CardPokemon(props) {
             </div>
             <div className="flexbox ml-4" key={props.key}>
               <p className="text-2xl ">{props.name}</p>
-              <p className="text-white">{props.type[0].type.name}</p>
+              {/* <p className= {Cardcss.typetext}>{props.type[0].type.name}</p> */}
 
-              {/* {props.type.map((tipos)=>{
+              <div className="flex ">
+              {props.type.map((tipos)=>{
                       return(
-                        <p className='ml-1'>{tipos.type.name}</p>
+                        <p className={Cardcss.typetext}>{tipos.type.name}</p>
                       )
                     })
-                    } */}
+              }
+              </div>
             </div>
           </div>
 
@@ -41,6 +43,5 @@ export default function CardPokemon(props) {
           </div>
         </div>
       </Link>
-    </div>
   );
 }

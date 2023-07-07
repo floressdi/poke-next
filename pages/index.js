@@ -1,5 +1,4 @@
 import { Arapey, Inter, Plus_Jakarta_Sans, Red_Rose } from "next/font/google";
-import { data } from "autoprefixer";
 import Homecss from "../styles/Home.module.css";
 import logo from "../public/image/pokedex.png";
 import CardPokemon from "@/components/CardPokemon";
@@ -56,14 +55,12 @@ export default function Home({
 
   return (
     <div className="flex min-h-screen flex-col items-center  ">
-      <nav className={`${Homecss.nav}`}>
+      <nav className={`${Homecss.nav} bg-white dark:bg-stone-800`}>
         <div className="w-full flex items-center justify-center">
           <BotonPoke />
-
           <Search
           // onSubmit={envio}
           />
-
           <BtnMenu clicked={clickedMenu} handleClickMenu={handleClickMenu} />
         </div>
 
@@ -77,7 +74,7 @@ export default function Home({
                 smooth={true}
                 offset={50}
                 duration={300}
-                className="w-full mx-auto rounded-xl cursor-pointer text-neutral-600 text-2xl p-2 text-center md:text-base md:p-1 todos md:h-8 md:w-20  "
+                className="w-full mx-auto rounded-xl cursor-pointer text-neutral-600 text-2xl p-1 text-center md:text-base  todos md:h-8 md:w-20  "
                 onClick={() => filtrar("borrar")}
               >
                 Todos
@@ -87,7 +84,7 @@ export default function Home({
                 return (
                   <Link
                     key={tipo.name}
-                    className={`${tipo.name} p-2 rounded-xl  cursor-pointer text-2xl text-white md:p-1 text-center md:text-base md:h-8 md:w-24`}
+                    className={`${tipo.name} p-1 rounded-xl  cursor-pointer text-2xl text-white  text-center md:text-base md:h-8 md:w-24`}
                     to="sectionpokemons"
                     spy={true}
                     smooth={true}
@@ -105,7 +102,7 @@ export default function Home({
       </nav>
 
       {/* Seccion de pokemones */}
-      <section id="sectionpokemons" className="w-full md:w-11/12 my-10 py-8 ">
+      <section id="sectionpokemons" className="w-full  my-10 py-8 ">
         <div className="w-10/12 mx-auto my-3">
           <h2 className=" text-xl md:text-2xl font-normal text-center">
             ¡Busca un pokemon por su nombre o por su numero !

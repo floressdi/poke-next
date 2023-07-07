@@ -23,6 +23,19 @@
     font-weight: bold;
 }
 
+.containertypes{
+    display: flex;
+    flex-direction: column;
+}
+
+.typetext{
+    background-color: var(--nav-color);
+    text-align: center;
+    border-radius: 15px;
+    margin-right:0.3em;
+    padding: 0.1em;
+}
+
 @media(min-width: 1000px){
     .cardpokemon{
         height: 150px;

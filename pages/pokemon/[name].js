@@ -4,6 +4,7 @@ import { IoIosArrowBack, IoMdAdd } from "react-icons/io";
 import Link from "next/link";
 import Stats from "@/components/Stats";
 import InfoMain from "@/components/InfoMain";
+// import Description from "@/components/Description";
 import Image from "next/image";
 
 export default function Pokemon({ data}) {
@@ -21,7 +22,6 @@ export default function Pokemon({ data}) {
         <Image src={data.sprites.other.dream_world.front_default} width={200} height={200} alt={data.name}/>
       </header>
 
-      {/*     className="my-5" */}
       {/* Informacion importante */}
       <section className="py-6 md:w-8/12 lg:w-6/12 md:mx-auto">
         <div className="w-11/12 mx-auto">

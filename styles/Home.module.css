@@ -2,7 +2,6 @@
 .nav{
     width: 100%;
     height: auto;
-    backdrop-filter: blur(10px);
     display: flex;
     align-items: center;
     justify-content: center;
