@@ -173,7 +173,7 @@ body{
   background-color: hsl(195, 95%, 40%);
 }
 .ice{
-  background-color: hsl(195, 100%, 74%);
+  background-color: #81f7e5;
 }
 .rock{
   background-color: hsl(49, 37%, 71%);
@@ -191,7 +191,7 @@ body{
   background-color: hsl(282, 25%, 63%);
 }
 .bug{
-  background-color: hsl(103, 84%, 71%);
+  background-color: hsl(81, 53%, 68%);
 }
 .poison{
   background-color: hsl(293, 61%, 73%);

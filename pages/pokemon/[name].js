@@ -19,7 +19,7 @@ export default function Pokemon({ data}) {
             </div>
           </Link>
         </nav>
-        <Image src={data.sprites.other.dream_world.front_default} width={200} height={200} alt={data.name}/>
+        <Image src={data.sprites.other.home.front_default} width={250} height={250} alt={data.name}/>
       </header>
 
       {/* Informacion importante */}

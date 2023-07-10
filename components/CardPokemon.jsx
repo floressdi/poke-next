@@ -19,8 +19,8 @@ export default function CardPokemon(props) {
               <Image
                 src={props.img}
                 alt={props.name}
-                width={80}
-                height={80}
+                width={90}
+                height={90}
               />
             </div>
             <div className="flexbox ml-4" key={props.key}>

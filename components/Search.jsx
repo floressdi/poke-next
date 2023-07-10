@@ -24,7 +24,7 @@ export default function Search(props) {
   });
 
   const autocomplete = useMemo(() =>createAutocomplete({
-        placeholder: "Buscar entre 1 a 650",
+        placeholder: "Buscar entre 1 a 900",
         onStateChange: ({ state }) => setAutocompleteState(state),
         getSources: () => [{
             sourceId: "offers-next-api",

@@ -59,7 +59,7 @@ export default function Home({
         <div className="w-full flex items-center justify-center">
           <BotonPoke />
           <Search
-          // onSubmit={envio}
+            // onSubmit={envio}
           />
           <BtnMenu clicked={clickedMenu} handleClickMenu={handleClickMenu} />
         </div>
