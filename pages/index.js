@@ -46,7 +46,7 @@ export default function Home({
 
   const [limite, setLimite] = useState(25);
   const showmore = () => {
-    if (limite <= 800) {
+    if (limite <= 905) {
       setLimite(limite + 25);
     } else {
       setLimite(limite === 25);
